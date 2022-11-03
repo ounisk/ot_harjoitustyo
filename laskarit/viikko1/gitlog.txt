@@ -1,0 +1,124 @@
+ounissin@lx1-fuxi045:~/ot_viikko1/tiedostoja$ git log --stat | cat
+commit 8d9dc99d8646c2d6a33e1789f51339138f74e730
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Wed Nov 2 17:11:08 2022 +0200
+
+    poistettu file1 ja uudelleennimetty file2 file22:ksi
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 579dd88ee140cf878c175278f5f8cc6bc5efd318
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Wed Nov 2 16:54:44 2022 +0200
+
+    luotu tiedostoja hakemisto ja kolme tiedostoa
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 414283ee711e0980d1a60920c480ee9a63ded4c5
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Wed Nov 2 16:37:56 2022 +0200
+
+    lisäyksiä ja poistoja tiedostoihin
+
+ eka.txt    | 3 +++
+ kolmas.txt | 5 +++++
+ 2 files changed, 8 insertions(+)
+
+commit 66d6b0acde23453b23974d1972b5ff951fb60e73
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Tue Nov 1 19:52:03 2022 +0200
+
+    nimenmuutoksen takia pois
+
+ tiedosto.txt | 10 ----------
+ 1 file changed, 10 deletions(-)
+
+commit d75cb9c469a8540ec2584ac4b41a2737a148be25
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Tue Nov 1 19:50:05 2022 +0200
+
+    muutettu tiedosto.txt nimeksi eka.txt
+
+ eka.txt | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit 352ae98c77443b0fa46fa94ab92980759b6caf04
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Tue Nov 1 19:47:17 2022 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit f1975517506eca8da715209df3da111d1ffc72e9
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Tue Nov 1 19:41:42 2022 +0200
+
+    poistettu ja lisätty tekstiä
+
+ tiedosto.txt | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+commit 31c061a5c2245729dbe7291a4fc682981d392c6c
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Tue Nov 1 19:39:32 2022 +0200
+
+    lisätty paljon tekstiä
+
+ tiedosto.txt | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit 2ec61f7136568559f1bbfd17343a2a8ebaf25ae5
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Tue Nov 1 19:31:31 2022 +0200
+
+    lisätty stuff-hakemisto
+
+ stuff/random.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 63b0a22b11ebd7a89d6e6d11287e935fc49450d3
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Tue Nov 1 19:28:18 2022 +0200
+
+    muokattiin toista ja kolmatta
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 100c9f2b3216b7a996892a0ce1aef2cda69eb860
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Tue Nov 1 19:26:34 2022 +0200
+
+    luotu kolmas tiedosto
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9b5d110c5e054cae3e4ad7fb7250d1c37df69144
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Tue Nov 1 19:22:39 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit d68b0e863555487fd7c9e6febee438ef4ef4b2db
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
+Date:   Tue Nov 1 19:18:26 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ounissin@lx1-fuxi045:~/ot_viikko1/tiedostoja$ 
