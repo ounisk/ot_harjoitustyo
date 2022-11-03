@@ -1,6 +1,6 @@
 ounissin@lx1-fuxi045:~/ot_viikko1/tiedostoja$ git log --stat | cat
 commit 8d9dc99d8646c2d6a33e1789f51339138f74e730
-Author: Outi nissinen <78747844+ounisk@users.noreply.github.com>
+Author: Outi Nissinen <78747844+ounisk@users.noreply.github.com>
 Date:   Wed Nov 2 17:11:08 2022 +0200
 
     poistettu file1 ja uudelleennimetty file2 file22:ksi
