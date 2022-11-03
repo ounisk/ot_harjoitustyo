@@ -1,8 +1,7 @@
-# Tässä on otsikko, kaikista suurin
-## Toinen otsikko
-###### Pienin otsikko
+# Ohjelmistotekniikka, harjoitustyö
+## Tehtävät
+### Viikko 1
 
-Tässä testaan muotoilua, **lihavoituna** (tulee 2 tähteä molemminpuolin) 
-ja *kursivoituna* (tulee yksi tähti).
+[gitlog.txt](https://github.com/ounisk/ot_harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
-~~Jos tulee virhe, sen voi yliviivata~~
+[komentorivi.txt](https://github.com/ounisk/ot_harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
