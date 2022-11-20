@@ -1,12 +1,46 @@
-# Ohjelmistotekniikka, harjoitustyö
-## Tehtävät
-### Viikko 1:
 
-[gitlog.txt](https://github.com/ounisk/ot_harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+# Ostoslista-sovellus
 
-[komentorivi.txt](https://github.com/ounisk/ot_harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+Sovelluksen tarkoituksena on toimia perheen sisäisenä kauppalistana ruokaostoksia varten. Sovellus on useamman käyttäjän käytettävissä, lisäksi se on toiminnoiltaan sujuva ja helppo käyttää.
 
-### Viikko 2:
+Sovelluksen kehitys on vielä kesken, joten tällä hetkellä toiminnot ovat vielä suppeat ja käyttöliittymä on yksinkertainen. 
+
+Sovellus on tehty Helsingin yliopiston Ohjelmistotekniikka-kurssin harjoitustyönä syksyllä 2022.
+
+This is a course project for a software development course at the University of Helsinki. The software is a grocery list application suitable for family use.
+
+
+### Dokumentaatio:
 [vaatimusmaarittely.md](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [tyoaikakirjanpito.md](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
+[changelog.md](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
+### Asennus:
+1. Asenna ensin riippuvuudet komennolla
+```
+poetry install
+```
+2. Suorita tarvittavat alustustoimenpiteet komennolla:
+```
+poetry run invoke build
+```
+3. Käynnistä sovellus komennolla:
+```
+poetry run invoke start
+```
+
+### Komentorivitoiminnot:
+Ohjelman suorittaminen tapahtuu komennolla:
+```
+poetry run invoke start
+```
+Testit suoritetaan komennolla:
+```
+poetry run invoke test
+```
+Testikattavuus raportti luodaan ao. komennolla ja se generoituu *htmlcov*-hakemistoon tiedostoon *index.html*
+```
+poetry run invkoke coverage-report
+```
