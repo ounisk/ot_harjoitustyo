@@ -17,6 +17,9 @@ This is a course project for a software development course at the University of 
 
 [changelog.md](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
+[arkkitehtuuri.md](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+
 ### Asennus:
 1. Asenna ensin riippuvuudet komennolla
 ```
@@ -42,5 +45,5 @@ poetry run invoke test
 ```
 Testikattavuus raportti luodaan ao. komennolla ja se generoituu *htmlcov*-hakemistoon tiedostoon *index.html*
 ```
-poetry run invkoke coverage-report
+poetry run invoke coverage-report
 ```
