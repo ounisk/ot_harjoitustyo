@@ -15,12 +15,13 @@ class Grocerylist_app:
 
     def add(self):
         product = input("Anna tuote: ")
+        #quantity = input ("Anna määrä: ")    #added . 28.11
         try:
             product = int(product)
             print("Annoit numeroita!")
 
         except ValueError:
-            self._list.add_product(product)
+            self._list.add_product(product) #, quantity) #muok. 28.11
 
     def remove(self):  # added 22.11
         self.print_list()
@@ -38,8 +39,8 @@ class Grocerylist_app:
             return
 
     def empty_list(self):  # added 26.11
-        check = input("Haluatko varmasti tyhjentää koko listan - kyllä/ei?: ")
-        if check == "kyllä":
+        check = input("Haluatko varmasti tyhjentää koko listan - kylla/ei?: ")
+        if check == "kylla":
             self._list.empty_whole_list()
         else:
             return self.user_instructions()
