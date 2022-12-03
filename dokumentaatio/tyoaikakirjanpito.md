@@ -12,4 +12,11 @@
 |  24.11.2022   |    2        | Muutettu harjoitustyönrakenne *repository*-malliin.  |
 |  26.11.2022   |    4        | Lisätty  uusi toiminnallisuus (koko listan tyhjennys). Lisätty tämän viikon uusia toiminnallisuuksia koskevat testit. Harjoittelin tallentamisen ja lukemisen toteuttamista tietokantaan tiedoston sijaan.  |
 | viikko yht.      |       **11.5**      |    |
-| **Kaikki yht.**      |       **18.0**      |    |
+|  28.11.2022   |    2        | Lisätty toiminnallisuudeksi tuotteiden määrän lisääminen. Harjoittelin tietokantatoteutusta.    |
+|  29.11.2022   |    2        | Tehty siirtymä .csv-tiedoston käytöstä SQLite-tietokannan käyttöön - muutettu/lisätty hakemistoja ja tiedostoja.    |
+|  30.11.2022   |    1.5        | Päivitetty testaustiedosto tietokannan käyttöön siirtymisen takia.    |
+|  1.12.2022   |    1.5        | Harjoittelin toiminnallisuutta, joka mahdollistaa kaupan lisäämisen ja kauppakohtaiset listat.   |
+|  2.12.2022   |    2        | Toteuteutin kauppa-toiminnallisuuden, päivitetty vanhoja testejä ja lisätty uusi testi sen johdosta.    |
+|  3.12.2022   |    2        | Aloitin tutustumisen TkInteriin materiaalien ja referenssisovelluksen avulla ja harjoittelin sen käyttöä VSCodessa.    |
+|   viikko yht.  |    **11.0**     | 
+| **Kaikki yht.**      |   **29**   |
