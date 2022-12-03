@@ -5,10 +5,10 @@
 ## Käyttäjät
 Sovelluksella voi olla useampia käyttäjiä, jotka kaikki ovat *normikäyttäjiä*. Kaikilla käyttäjillä on siten samat oikeudet: listan/tuotteiden lisäys ja poisto kumpaan tahansa tai molempiin kauppoihin sekä määrien muuttaminen.
 ## Perusversion tarjoamat ominaisuudet
-- [ ] Sovelluksen avautuessa tarjolla on kaksi kauppaa: *Lähikauppa* ja *Lidl*.
+- [x] Sovelluksen avautuessa tarjolla on kaksi kauppaa: *K-market* ja *Lidl*.
 - Käyttäjät voivat lisätä kumman tahansa kaupan listaan
   - [x] haluamiaan tuotteita ja 
-  - [ ] yksilöidä määrän (määrä ei ole pakollinen tieto), sama tuote voi olla molempien kauppojen ostoslistoilla.
+  - [x] yksilöidä määrän (määrä ei ole pakollinen tieto), sama tuote voi olla molempien kauppojen ostoslistoilla.
 - Käyttäjät voivat poistaa tai muuttaa listan sisältöä: 
    - [x] poistaa yksitellen tuotteita tai
     - [ ] muuttaa määriä. 
