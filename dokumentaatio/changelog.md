@@ -14,4 +14,4 @@
 - Lisätty toiminnallisuus, joka mahdollistaa määrien syöttämisen
 - Lisätty toiminnallisuus, joka mahdollistaa tuotteiden syöttämisen haluttuun kauppaan ja tuotteiden poiston halutun kaupan listalta
 - Siirrytty aiemmasta tallennusmuodosta (.csv-tiedosto) SQLite-tietokantaan ja tehty sen vaatimat muutokset hakemistoihin ja tiedostoihin
-- Lisätty testi koskien kauppakohtaisia listoja (tuotteiden ja määrien oikeellisuus)
+- Lisätty testi koskien kauppakohtaisia listoja (tuotteiden ja määrien oikeellisuus) sekä testi koskien listalla olemattoman tuotteen poistoyritystä
