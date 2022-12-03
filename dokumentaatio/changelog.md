@@ -9,3 +9,9 @@
 - Muutettu aiempi tallennusmuoto (tietorakenteena oli ensin pelkkä lista), siten että tieto tallennetaan ja luetaan .csv-tiedostosta
 - Lisätty toiminnallisuuksiin tavaroiden poisto ja koko listan tyhjentäminen
 - Lisätty testeihin uusia toiminnallisuuksia (poisto ja koko listan tyhjentäminen) koskevat testit
+
+## Viikko 5
+- Lisätty toiminnallisuus, joka mahdollistaa määrien syöttämisen
+- Lisätty toiminnallisuus, joka mahdollistaa tuotteiden syöttämisen haluttuun kauppaan ja tuotteiden poiston halutun kaupan listalta
+- Siirrytty aiemmasta tallennusmuodosta (.csv-tiedosto) SQLite-tietokantaan ja tehty sen vaatimat muutokset hakemistoihin ja tiedostoihin
+- Lisätty testi koskien kauppakohtaisia listoja (tuotteiden ja määrien oikeellisuus)
