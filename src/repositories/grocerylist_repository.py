@@ -1,70 +1,77 @@
-from pathlib import Path
+#from pathlib import Path
 from entities.grocerylist_entity import Grocerylist
-from config import ALIST_FILE_PATH
+from database_connection import get_database_connection
+#from config import ALIST_FILE_PATH
 
 
 class GrocerylistRepository:
-    def __init__(self, file_path):
-        self._file_path = file_path
+    def __init__(self, connection):
+        self._connection = connection
 
     def list_products(self):
-        return self._get_list()
+        cursor = self._connection.cursor()
+        #cursor.execute("SELECT * FROM Groceries")
+        cursor.execute(
+            "SELECT product, quantity, store FROM Groceries ORDER BY store")
+        rows = cursor.fetchall()
 
-    def _check_file(self):
-        Path(self._file_path).touch()
+        products = []
 
-    def _get_list(self):
-        tuotteet = []
+        for row in rows:
+            products.append(row)
+        return products
+        # if rows:
+        #    return list([Grocerylist(row["product"], row["quantity"]) for row in rows])
+        # else:
+        #    return None
 
-        self._check_file()
-        with open(self._file_path, encoding="utf-8") as file:
-            for row in file:
-                row = row.replace("\n", "")
-                parts = row.split(";")
+    def list_products_store(self, in_store):  # added 2.12
+        cursor = self._connection.cursor()
+        cursor.execute(
+            """SELECT product, quantity FROM Groceries WHERE store =(?)""", [in_store])
+        rows = cursor.fetchall()
 
-                product = parts[0]
-                #quantity = parts[1]
-                #store_id = parts[2]
+        if rows:
+            products = []
 
-                # , quantity)) #, store_id))
-                tuotteet.append(Grocerylist(product))
+            for row in rows:
+                products.append(row)
+            return products
 
-        return tuotteet
+    def find_product(self, find_product, in_store):
+        cursor = self._connection.cursor()
+        #cursor.execute("SELECT product FROM Groceries WHERE product = ?", [find_product])
+        cursor.execute("SELECT product FROM Groceries WHERE product = (?) AND store =(?)",
+                       [find_product, in_store])
+        rows = cursor.fetchall()
 
-    def add(self, product):
-        tuotteet = self.list_products()
-        tuotteet.append(product)
-        self._update(tuotteet)
-        return product
+        products = []
 
-    def delete(self, product_del):
-        #list_products = self.list_products()
-        # for product_del in list_products:
-        # if list_products.product_del == product_del:
-        #    list_products.remove(product_del)  # tämä ei mene oikein!!!!!
-        # list_products.remove(product) oli ensin, poisti vääriä tuotteita
+        for row in rows:
+            products.append(row)
+        return products
+        # vaihtoehto(kurssipruju):
+        # return [Grocerylist(row["product"], row["quantity"]) for row in rows]
 
-        # self._update(list_products)
-        # Alternative:
-        list_products = self.list_products()
+    def add(self, new_product: Grocerylist):
+        cursor = self._connection.cursor()
+        cursor.execute("INSERT INTO Groceries (product, quantity, store) VALUES (?,?, ?)",
+                       [new_product.product, new_product.quantity, new_product.store])
+        self._connection.commit()
 
-        list_products_without_item = filter(
-            lambda grocerylist: grocerylist.product != product_del, list_products)
-        self._update(list_products_without_item)
+    def delete(self, product_delete, from_store):
+        cursor = self._connection.cursor()
+        cursor.execute("SELECT id FROM Groceries WHERE product = (?) AND store =(?)",
+                       [product_delete, from_store])
 
-    def empty_all(self):  # added 26.11 empties whole list
-        list_products = []
-        self._update(list_products)
+        del_id = cursor.fetchone()[0]
+        cursor.execute("DELETE FROM Groceries WHERE id = (?)", [del_id])
+        self._connection.commit()
 
-    def _update(self, tuotteet):
-        self._check_file()
-
-        with open(self._file_path, "w", encoding="utf-8") as file:
-            for tuote in tuotteet:
-
-                # ;{tuote.quantity}" #;{tuote.store_id}"
-                row = f"{tuote.product}"
-                file.write(row+"\n")
+    def empty_all(self):
+        cursor = self._connection.cursor()
+        cursor.execute("DELETE FROM Groceries")
+        self._connection.commit()
 
 
-grocerylist_repository = GrocerylistRepository(ALIST_FILE_PATH)
+grocerylist_repository = GrocerylistRepository(get_database_connection())
