@@ -3,70 +3,53 @@ from repositories.grocerylist_repository import (
     grocerylist_repository as default_grocerylist_repository)
 
 
+class ProductAlreadyOnListError(Exception):
+    pass
+
+
+class ProductNotOnListError(Exception):
+    pass
+
+
 class GrocerylistService:
 
     def __init__(self, grocerylist_repository=default_grocerylist_repository):
         #self._groceries = []
         self._grocerylist_repository = grocerylist_repository
 
-    def add_product(self, product: str):
-        list_products = self._grocerylist_repository.list_products()
+    def add_product(self, product: str, quantity: int, store: str):
+        # Database
+        product_is_on_list = self._grocerylist_repository.find_product(
+            product, store)
 
-        for products in list_products:
-            if products.product == product:
-                print("Tuote on jo listalla")
-                return
+        if product_is_on_list:
+            raise ProductAlreadyOnListError("Tuote on jo listalla!")
 
+        # list_products = self._grocerylist_repository.list_products() #CSV:lle
+        # for products in list_products:
+        #    if products.product == product:
+        #        print("Tuote on jo listalla")
+        #        return
             # else:
-        product = Grocerylist(product=product)  # , quantity=2)
+        product = Grocerylist(product=product, quantity=quantity, store=store)
 
         return self._grocerylist_repository.add(product)
         # return
 
-    def delete_product(self, product):  # added 22.11
-        #list_products = self._grocerylist_repository.list_products()
+    def delete_product(self, product, store):
+        try:  # lisätty try except 4.12.2022
+            self._grocerylist_repository.delete(product, store)
+        except TypeError:
+            raise ProductNotOnListError("Tuotetta ei ole listalla!")
 
-        # for products in list_products:
-        #    if not products.product == product:
-        #        print("Tuotetta ei ole listalla!")
-        #        return
-
-        self._grocerylist_repository.delete(product)
-
-    def empty_whole_list(self):  # added 26.11
+    def empty_whole_list(self):
         self._grocerylist_repository.empty_all()
 
     def get_products(self):
-        # if not self._groceries:
-        #    return None
-        # else:
-        # palauttaa objekteja!!!!  vai a=self._kauppalista.... ja return list(a)
         return self._grocerylist_repository.list_products()
+
+    def get_products_store(self, store):  # lis 2.12
+        return self._grocerylist_repository.list_products_store(store)
 
 
 grocerylist_service = GrocerylistService()
-
-
-# BELOW old code before repository architecture change:
-# class Grocerylist:   #OLD code, before repository architecture
-#    def __init__(self):
-#        self._groceries = []
-
-#    def add_product(self, product: str):
-#        if product in self._groceries:
-#            print("Tuote on jo listalla")
-#            return
-#        else:
-#            self._groceries.append(product)
-# return
-
-#    def delete_product(self, product: str):  #added 22.11
-#        self._groceries.remove(product)
-
-# add modify function
-
-#    def get_products(self):
-#        if not self._groceries:
-#            return None
-#        else:
-#            return self._groceries
