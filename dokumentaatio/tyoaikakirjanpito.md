@@ -18,6 +18,6 @@
 |  1.12.2022   |    1.5        | Harjoittelin toiminnallisuutta, joka mahdollistaa kaupan lisäämisen ja kauppakohtaiset listat.   |
 |  2.12.2022   |    2        | Toteuteutin kauppa-toiminnallisuuden, päivitetty vanhoja testejä ja lisätty uusi testi sen johdosta.    |
 |  3.12.2022   |    2        | Aloitin tutustumisen TkInteriin materiaalien ja referenssisovelluksen avulla ja harjoittelin sen käyttöä VSCodessa.    |
-| 4.12.2022   |    1.5       | Lisätty asialliset virheilmoitukset virhetilanteissa (lisäämisyritys, jos tuote jo listalla sekä poistoyritys, jos tuotetta ei ole listalla. Pävitetty testaustiedosto näiden virhetilanteiden osalta.    |
+| 4.12.2022   |    1.5       | Lisätty asialliset virheilmoitukset virhetilanteissa (lisäämisyritys, jos tuote jo listalla sekä poistoyritys, jos tuotetta ei ole listalla). Pävitetty testaustiedosto näiden virhetilanteiden osalta.    |
 |   viikko yht.  |    **12.5**     | 
 | **Kaikki yht.**      |   **30.5**   |
