@@ -1,14 +1,15 @@
 
-class Grocerylist:  # list for one store
-    def __init__(self, product: str):  # , quantity):  #lisää store_id???
-        self.grocerylist = []
+class Grocerylist:
+    def __init__(self, product: str, quantity: int, store: str):
+        #self.grocerylist = []
         self.product = product
+        self.quantity = quantity
+        self.store = store
 
-        #self.quantity= quantity
-
-    def __str__(self):
-        # tää piti olla etttä printaa tuotteet, eikä objektia 0x
-        return str(self.product)
+    # def __str__(self):
+        # tää piti olla että printaa tuotteet, eikä objektia 0x
+        # return str(self.product)
+        # return f"{str(self.product)} - {self.quantity}" #muut 28.11
 
     # def __eq__(self, other):
     #    return self.product == other.product
