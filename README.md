@@ -20,6 +20,10 @@ This is a course project for a software engineering course at the University of 
 [arkkitehtuuri.md](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 
+### Release:
+[viikko 5 - release](https://github.com/ounisk/ot_harjoitustyo/releases/tag/viikko5)
+
+
 ### Asennus:
 1. Asenna ensin riippuvuudet komennolla:
 ```
