@@ -20,4 +20,11 @@
 |  3.12.2022   |    2        | Aloitin tutustumisen TkInteriin materiaalien ja referenssisovelluksen avulla ja harjoittelin sen käyttöä VSCodessa.    |
 | 4.12.2022   |    1.5       | Lisätty asialliset virheilmoitukset virhetilanteissa (lisäämisyritys, jos tuote jo listalla sekä poistoyritys, jos tuotetta ei ole listalla). Pävitetty testaustiedosto näiden virhetilanteiden osalta.    |
 |   viikko yht.  |    **12.5**     | 
-| **Kaikki yht.**      |   **30.5**   |
+|  5.12.2022   |    1.5        | Luotu oma tiedosto tietokantaoperaatioiden testaamiseen ja luotu niitä koskevat testit. Eriytetty services- ja repository-testit.    |
+|  6.12.2022   |    3        | Uusien toiminnallisuuksien suunnittelu ja testaus. Lisätty uutena toiminnallisuutena TOP3-tuotteiden lista.|
+|  7.12.2022   |    1.5        | Lisätty uudeksi toiminnallisuudeksi tuotteiden määrän muokkaus. |
+|  8.12.2022   |    1.5       | Päivitetty testaustiedostoja uusilla testeillä koskien tällä viikolla lisättyjä toiminnallisuuksia. |
+|  9.12.2022   |    2       | Suunniteltu värien lisäämistä käyttöliittymään ja tutkittu ulkoisia kirjastoja, joilla saadaan värejä käyttöön. Lisätty *termcolor*-kirjasto riippuvuudeksi. Muokattu käyttöliittymän tulostuksia.|
+|  10.12.2022   |    0.5        | Koodin refaktorointia, myös pylintin ehdotusten pohjalta.|
+|   viikko yht.  |    **10**     | 
+| **Kaikki yht.**      |   **40.5**   |
