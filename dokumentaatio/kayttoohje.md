@@ -1,8 +1,8 @@
 # Käyttöohje:
-Projektin viimeisimmän version löydät tällä hetkellä README.md-tiedostossa otsikon "Release" alta, josta löytyy linkki viimeisimpään versioon.
+Projektin viimeisimmän version löydät [Releases-osiosta](https://github.com/ounisk/ot_harjoitustyo/releases), jossa valitaan on Assets-otsikon alta *Source code*.
 
 ## Konfigurointi:
-Sovellus lukee ja tallentaa tietoja tietokantaan. Tietokantatiedoston nimi löytyy tiedostosta .env, jossa sitä voi
+Sovellus lukee ja tallentaa tietoja tietokantaan. Tietokantatiedoston nimi löytyy tiedostosta *.env*, jossa sitä voi
 halutessaan muuttaa. Tietokantatiedoston default nimi on database_grocerylist.sqlite. Tiedostot luodaan hakemistoon *data*.
 
 ## Ohjelman asennus ja käynnistäminen:
