@@ -3,7 +3,7 @@
 
 Sovelluksen tarkoituksena on toimia perheen sisäisenä kauppalistana ruokaostoksia varten. Sovellus on useamman käyttäjän käytettävissä, lisäksi se on toiminnoiltaan sujuva ja helppo käyttää.
 
-Toimintoja ovat tuotteen ja mahd. määrän lisäys valittuun kauppaan, tuotteen poisto ja kaikkien listojen tyhjennys. Käyttöliittymä on tekstikäyttöliittymä. 
+Toimintoja ovat tuotteen ja mahdollisen määrän lisäys valittuun kauppaan, tuotteen poisto, tuotteen määrän muokkaus, TOP3-lista ja kaikkien listojen tyhjennys. Käyttöliittymä on tekstikäyttöliittymä. 
 
 Sovellus on tehty Helsingin yliopiston Ohjelmistotekniikka-kurssin harjoitustyönä syksyllä 2022.
 
@@ -11,13 +11,16 @@ This is a course project for a software engineering course at the University of 
 
 
 ### Dokumentaatio:
-[vaatimusmaarittely.md](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[tyoaikakirjanpito.md](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+[Käyttöohje](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
-[changelog.md](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/changelog.md)
+[Vaatimusmäärittely](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[arkkitehtuuri.md](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+[Työaikakirjanpito](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
+[Changelog](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
+[Arkkitehtuuri](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 
 ### Release:
