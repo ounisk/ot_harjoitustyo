@@ -26,5 +26,6 @@
 |  8.12.2022   |    1.5       | Päivitetty testaustiedostoja uusilla testeillä koskien tällä viikolla lisättyjä toiminnallisuuksia. |
 |  9.12.2022   |    2       | Suunniteltu värien lisäämistä käyttöliittymään ja tutkittu ulkoisia kirjastoja, joilla saadaan värejä käyttöön. Lisätty *termcolor*-kirjasto riippuvuudeksi. Muokattu käyttöliittymän tulostuksia.|
 |  10.12.2022   |    0.5        | Koodin refaktorointia, myös pylintin ehdotusten pohjalta.|
-|   viikko yht.  |    **10**     | 
-| **Kaikki yht.**      |   **40.5**   |
+|  11.12.2022   |    1        | Koodin refaktorointa grocerylist_services_test-tiedostossa. |
+|   viikko yht.  |    **11**     | 
+| **Kaikki yht.**      |   **41.5**   |
