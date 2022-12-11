@@ -1,4 +1,3 @@
-#from services.grocerylist_service import Grocerylist
 from ui.ui import Grocerylist_app
 
 
