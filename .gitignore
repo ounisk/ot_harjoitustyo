@@ -3,4 +3,4 @@ __pycache__
 .coverage
 htmlcov
 data/database_grocerylist.sqlite
-data/test-database_grocerylist.sqlite
+data/test-data_base.sqlite
