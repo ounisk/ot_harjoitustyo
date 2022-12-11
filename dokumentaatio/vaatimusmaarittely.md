@@ -11,14 +11,14 @@ Sovelluksella voi olla useampia käyttäjiä, jotka kaikki ovat *normikäyttäji
   - [x] yksilöidä määrän (määrä ei ole pakollinen tieto), sama tuote voi olla molempien kauppojen ostoslistoilla.
 - Käyttäjät voivat poistaa tai muuttaa listan sisältöä: 
    - [x] poistaa yksitellen tuotteita tai
-    - [ ] muuttaa määriä. 
+   - [x] muuttaa määriä. 
 
 - [x] Lisäksi on mahdollisuus tyhjentää kerralla koko lista.
 - Kaikki käyttäjät näkevät kaikki avoinna olevat kauppalistat.
 
 ## Jatkokehitysideat
 - Uusien kauppojen lisääminen listalle, joka olisi mahdollisesti ylläpitäjän tehtävä. Tällöin edellytetään ylläpitäjän roolia.
-- *Top-tuotteet* -listan lisääminen, jolloin yksittäisten top-tuotteiden lisääminen kauppalistalle hoituisi yhdellä valinnalla.  
+- [x] *Top3* -listan lisääminen  
 
 
 ## Käyttöliittymäluonnos
