@@ -1,15 +1,23 @@
 
 class Grocerylist:
+    """Luokka, joka kuvaa kauppalistan riviä.
+
+        Attributes:
+            product: Merkkijono, joka kuvaa yksittäistä tuotetta
+            quantity: Lukuarvo, joka kuvaa tuotteen määrää, voi olla myös tyhjä
+                    tai sanallinen (esim. nippu)
+            store: Merkkijono, joka kertoo lisätyn tuotteen kaupan
+        """
     def __init__(self, product: str, quantity: int, store: str):
-        #self.grocerylist = []
+        """Luokan konstruktori, joka luo uuden kauppalista olion.
+
+        Args:
+            product: Merkkijono, joka kuvaa yksittäistä tuotetta
+            quantity: Lukuarvo, joka kuvaa tuotteen määrää, voi olla myös tyhjä
+                    tai sanallinen (esim. nippu)
+            store: Merkkijono, joka kertoo lisätyn tuotteen kaupan
+        """
+
         self.product = product
         self.quantity = quantity
         self.store = store
-
-    # def __str__(self):
-        # tää piti olla että printaa tuotteet, eikä objektia 0x
-        # return str(self.product)
-        # return f"{str(self.product)} - {self.quantity}" #muut 28.11
-
-    # def __eq__(self, other):
-    #    return self.product == other.product
