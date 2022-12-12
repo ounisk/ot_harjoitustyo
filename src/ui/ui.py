@@ -3,10 +3,20 @@ from termcolor import cprint
 
 
 class Grocerylist_app:
+    """Luokka, joka vastaa Ostoslista-sovelluksen käyttöliittymästä.
+    """
+
     def __init__(self):
+        """Luokan konstruktori
+        """
+
         self._list = GrocerylistService()
 
     def user_instructions(self):
+        """Metodi, joka tulostaa sovelluksen käyttöohjeet.
+        
+        """
+
         print("Toiminnot:")
         print("0 - lopeta")
         print("1 - lisää tuote")
@@ -16,7 +26,13 @@ class Grocerylist_app:
         print("5 - näytä tuotteiden top3")
         print("6 - tyhjennä koko lista")
 
+
     def add(self):
+        """"Metodi, joka lisää tuotteen kaupan ostoslistaan, kysyy ensin tiedot
+        käyttäjältä, tulostaa virheilmoitukset, jos syöttiessä virheitä.
+        Tuotteen lisääminen tapahtuu kutsumalla GrocerylistService-luokan metodeita.
+        """
+
         store = input("Lisää tuote kauppaan - K-market vai Lidl?: ")
         if store not in ["K-market", "Lidl"]:
             print("Kauppa ei valittavissa!")
@@ -36,7 +52,13 @@ class Grocerylist_app:
             except ProductAlreadyOnListError:
                 print("Tuote on jo listalla!")
 
+
     def remove(self):
+        """Metodi, joka poistaa tuotteen kaupan ostoslistalta. Kysyy
+        käyttäjältä tiedot ja antaa virheilmoituksen tarvittaessa. Tuote 
+        poistetaan kutsumalla GrocerylistService-luokan metodia delete_product.
+        """
+        
         self.print_list()
         remove_from = input("Poista kaupan listalta - K-market vai Lidl?: ")
         remove_this = input("Anna poistettava tuote: ")
@@ -50,6 +72,7 @@ class Grocerylist_app:
                 self._list.delete_product(remove_this, remove_from)
             except ProductNotOnListError:
                 print("Tuotetta ei ole listalla!")
+
 
     def modify_product_quantity(self):
         self.print_list()
@@ -68,6 +91,7 @@ class Grocerylist_app:
                 modify_product, new_quantity, modify_from)
         except ProductNotOnListError:
             print("Tuotetta ei ole listalla!")
+
 
     def print_list(self):
         list_all = self._list.get_products()
