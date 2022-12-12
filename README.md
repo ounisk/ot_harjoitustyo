@@ -23,7 +23,9 @@ This is a course project for a software engineering course at the University of 
 [Arkkitehtuuri](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 
-### Release:
+### Releases:
+[viikko 6 - release](https://github.com/ounisk/ot_harjoitustyo/releases/tag/viikko6)
+
 [viikko 5 - release](https://github.com/ounisk/ot_harjoitustyo/releases/tag/viikko5)
 
 
