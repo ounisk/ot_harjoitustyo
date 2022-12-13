@@ -50,7 +50,7 @@ Tietokantatiedoston nimi on määritelty *.env*-tiedostossa.
 Grocerylist-oliot tallennetaan tietokantatauluihin *Groceries* ja *History*.
 
 ## Sekvenssikaavio
-### Tuotteen lisääminen
+### Tuotteen lisääminen:
   
 ```mermaid
 sequenceDiagram
@@ -58,23 +58,52 @@ sequenceDiagram
   participant UI
   participant GrocerylistService
   participant GrocerylistRepository
-  participant maito
+  participant product
   User ->> UI: selects "lisää tuote"
-  UI ->> GrocerylistService: add_product("maito", 2, "K-market")
-  GrocerylistService ->> GrocerylistRepository  : find_product("maito","K-market")
-  GrocerylistRepository -->> GrocerylistService: None
-  GrocerylistService ->> maito: Grocerylist("maito", 2, "K-market")
-  GrocerylistService ->> GrocerylistRepository: add(Grocerylist("maito", 2, "K-market"))
-  GrocerylistService ->> GrocerylistRepository: add_to_history(Grocerylist("maito", 2, "K-market"))
-  GrocerylistRepository -->> GrocerylistService: product
-  GrocerylistService -->> UI: product  
+  UI ->> +GrocerylistService: add_product("maito", 2, "K-market")
+  GrocerylistService ->> +GrocerylistRepository  : find_product("maito","K-market")
+  GrocerylistRepository -->> -GrocerylistService: None
+  GrocerylistService ->> product: Grocerylist("maito", 2, "K-market")
+  GrocerylistService ->> +GrocerylistRepository: add(product)
+  GrocerylistService ->> GrocerylistRepository: add_to_history(product)
+  GrocerylistRepository -->> -GrocerylistService: product
+  GrocerylistService -->> -UI: product  
 ``` 
-Toiminnallisuus alkaa käyttöliittymmässä, kun käyttäjä valitsee "lisää tuote" vaihtoehdon. Tämän jälkeen käyttäjä syöttää kaupan, tuotteen ja mahdollisen määrän. Käyttöliittymä kutsuu tämän jälkeen sovelluslogiikan *add_product* -metodia ja välittää annetut tiedot. Seuraavaksi sovelluslogiikka tarkastaa  *find_product* -metodilla onko ko.tuote jo ko.kaupan listassa. Mikäli näin ei ole (kuten tässä), niin sovelluslogiikka kutsuu seuraavaksi metodia *add(Grocerylist("maito", 2, "K-market"))* sekä *add_to_history(Grocerylist("maito", 2, "K-market"))*, jotka lisäävät *Grocerylist("maito", 2, "K-market")*-olion tietokannan tauluihin. Tämä jälkeen kontrolli palaa takaisin käyttöliittymään.
+Toiminnallisuus alkaa käyttöliittymässä, kun käyttäjä valitsee "lisää tuote" vaihtoehdon. Tämän jälkeen käyttäjä syöttää kaupan, tuotteen ja mahdollisen määrän. Käyttöliittymä kutsuu tämän jälkeen sovelluslogiikan *add_product* -metodia ja välittää annetut tiedot. Seuraavaksi sovelluslogiikka tarkastaa  *find_product* -metodilla onko ko.tuote jo ko.kaupan listassa. Mikäli näin ei ole (kuten tässä), niin sovelluslogiikka luo uuden Grocerylist-olion (*Grocerylist("maito", 2, "K-market")*) ja sitten kutsuu seuraavaksi GrocerylistRepository-luokan metodia *add(product)* sekä *add_to_history(product)*, jotka lisäävät *Grocerylist("maito", 2, "K-market")*-olion tietokannan tauluihin. Tämä jälkeen kontrolli palaa takaisin käyttöliittymään.
 
-### Tuotteen poisto
+### Tuotteen poisto:
+```mermaid
+sequenceDiagram
+  actor User
+  participant UI
+  participant GrocerylistService
+  participant GrocerylistRepository
+  User ->> UI: selects "poista tuote"
+  UI ->> GrocerylistService: delete_product("maito", "K-market")
+  GrocerylistService ->> GrocerylistRepository: delete("maito","K-market")
+``` 
+Tuotteen poisto tapahtuu käyttäjän valitessa käyttöliittymässä "poista tuote", jonka jälkeen käyttäjä antaa tuotteen ja kaupan, jonka listalta tuote poistetaan. Tämän jälkeen käyttöliittymä kutsuu sovelluslogiikan metodia *delete_product* välittäen annetut tiedot. Sovelluslogiikka kutsuu GrocerylistRepository-luokan metodia *delete*, joka etsii tuotteen tietokannasta ja poistaa sen. Mikäli ko.kaupan listalta ei löydy annettua tuotetta, käyttöliittymään palautetaan käyttäjälle asianmukainen virheilmoitus.
 
-### Määrän muokkaus
 
-### Tuotteiden listaus
+### Määrän muokkaus:
+```mermaid
+sequenceDiagram
+  actor User
+  participant UI
+  participant GrocerylistService
+  participant GrocerylistRepository
+  User ->> UI: selects "muokkaa tuotteen määrää"
+  UI ->> +GrocerylistService: modify_quantity("maito", 3, "K-market")
+  GrocerylistService ->> +GrocerylistRepository: find_product("maito", "K-market")
+  GrocerylistRepository -->> -GrocerylistService: products  
+  GrocerylistService ->> +GrocerylistRepository: modify_quantity_for_product("maito", 3, "K-market")
+  GrocerylistRepository -->> -GrocerylistService: product
+  GrocerylistService -->> -UI: product 
+  ``` 
+  Tuotteen määrää muokataan valitsemalla käyttöliittymässä "muokkaa tuotteen määrää". Tämän jälkeen käyttäjä antaa kaupan, tuotteen ja uuden määrään. Seuraavaksi käyttöliittymä kutsuu sovelluslogiikan *modify_quantity* -metodia käyttäjän antamilla tiedoilla. Sovelluslogiikka kutsuun ensin GrocerylistRepository-luokan *find_product* -metodia - jos tuote on ko.kaupan listalla, niin metodi palauttaa tuotteen listana. Seuraavaksi sovelluslogiikka kutsuu edelleen GrocerylistRepository-luokan metodia *modify_quantity_for_product*, joka muuttaa tuotteen määrän tietokantaan. Tämän jälkeen kontrolli palaa takaisin käyttöliittymään. (Jos tuotetta ei olisi kaupan listalla, niin sovelluslogiikkaan palautettu lista olisi tyhjä ja käyttäjä saisi virheilmoituksen, että tuotetta ei ole kaupan listalla.)  
 
-### Top3-tuotteiden listaus
+### Tuotteiden listaus:
+(kesken)
+
+### Top3-tuotteiden listaus:
+(kesken)
