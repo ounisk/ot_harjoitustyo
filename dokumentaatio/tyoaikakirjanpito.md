@@ -25,7 +25,7 @@
 |  7.12.2022   |    1.5        | Lisätty uudeksi toiminnallisuudeksi tuotteiden määrän muokkaus. |
 |  8.12.2022   |    1.5       | Päivitetty testaustiedostoja uusilla testeillä koskien tällä viikolla lisättyjä toiminnallisuuksia. |
 |  9.12.2022   |    2       | Suunniteltu värien lisäämistä käyttöliittymään ja tutkittu ulkoisia kirjastoja, joilla saadaan värejä käyttöön. Lisätty *termcolor*-kirjasto riippuvuudeksi. Muokattu käyttöliittymän tulostuksia.|
-|  10.12.2022   |    0.5        | Koodin refaktorointia, myös pylintin ehdotusten pohjalta.|
-|  11.12.2022   |    1        | Koodin refaktorointia grocerylist_services_test-tiedostossa. |
-|   viikko yht.  |    **11**     | 
-| **Kaikki yht.**      |   **41.5**   |
+|  10.12.2022   |    3.5        | Koodin refaktorointia, myös pylintin ehdotusten pohjalta (0.5h). Käyttöohjeen teko (1.5h), arkkitehtuuri-dokumentin täydennys (1.5h)|
+|  11.12.2022   |    3        | Koodin refaktorointia grocerylist_services_test-tiedostossa (1.5h). Docstringin lisäämistä koodiin (1.5h) |
+|   viikko yht.  |    **16**     | 
+| **Kaikki yht.**      |   **46.5**   |
