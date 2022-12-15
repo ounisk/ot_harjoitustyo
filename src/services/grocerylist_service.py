@@ -12,7 +12,11 @@ class ProductNotOnListError(Exception):
 
 
 class GrocerylistService:
-    """Luokka, joka vastaa sovelluslogiikasta."""
+    """Luokka, joka vastaa sovelluslogiikasta.
+    Attributes:
+        grocerylist_repository: GrocerylistRepository-olio, jolla on GrocerylistRepository
+                                luokkaa vastaavat metodit käytössä.
+    """
 
     def __init__(self, grocerylist_repository=default_grocerylist_repository):
         """Luokan konstruktori.
