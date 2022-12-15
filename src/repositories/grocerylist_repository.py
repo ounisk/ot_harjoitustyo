@@ -5,6 +5,8 @@ from database_connection import get_database_connection
 class GrocerylistRepository:
     """Luokka, joka vastaa kauppalistaan kohdistuvista tietokantaoperaatioista.
 
+    Attributes:
+        connection (connection -olio): tietokantayhteyden olio
     """
 
     def __init__(self, connection):
