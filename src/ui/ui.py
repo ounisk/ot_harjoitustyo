@@ -8,9 +8,13 @@ class Grocerylist_app:
 
     def __init__(self):
         """Luokan konstruktori
+
+        Args:
+            _list: GrocerylistService-luokan olio
         """
 
         self._list = GrocerylistService()
+
 
     def user_instructions(self):
         """Metodi, joka tulostaa sovelluksen käyttöohjeet.
@@ -75,6 +79,12 @@ class Grocerylist_app:
 
 
     def modify_product_quantity(self):
+        """Metodi, joka hoitaa tuotteen määrän muokkaamisen. Käyttäjälle 
+        näytetään ensin viimeisin lista ja kysytään tietoja. Tämän jälkeen 
+        kutsutaan GrocerylistService-luokan metodia modify_quantity. Mikäli
+        tuotetta ei ole listalla, käyttäjä saa virheilmoituksen.
+        """
+
         self.print_list()
         modify_from = input("Muokkaa määrää listalla - K-market vai Lidl?: ")
         if modify_from not in ["K-market", "Lidl"]:
@@ -94,6 +104,10 @@ class Grocerylist_app:
 
 
     def print_list(self):
+        """Metodi vastaa kauppalistan tuotteiden tulostamisesta.
+        Mikäli lista/listat ovat tyhjiä, se ilmoitetaan käyttäjälle.
+        """
+
         list_all = self._list.get_products()
 
         if list_all:
@@ -121,6 +135,10 @@ class Grocerylist_app:
             return
 
     def empty_list(self):
+        """Metodi, joka vastaa koko listan tyhjentämisestä, kutsuu 
+        GrocerylistService-luokan metodia.
+        """
+        
         check = input("Haluatko varmasti tyhjentää koko listan - kylla/ei?: ")
         if check == "kylla":
             self._list.empty_whole_list()
@@ -128,6 +146,10 @@ class Grocerylist_app:
             return self.user_instructions()
 
     def get_top3(self):
+        """Metodi, joka listaa top3-tuoteet, kutsuu GrocerylistService-luokan
+        metodia.
+        """
+        
         list_top3 = self._list.get_top3_products()
         if list_top3:
             cprint("TOP3 tuotteet:", "green")
@@ -137,6 +159,12 @@ class Grocerylist_app:
             print("TOP3 on tyhjä.")
 
     def start(self):
+        """Metodi, joka vastaa käyttäjän valitseman toimenpiteen
+        eteenpäinviemisestä. Tulostaa ensin toiminnot ja pyytää
+        käyttäjää valitsemaan haluamansa toiminnon.
+        
+        """
+        
         cprint("***OSTOSLISTA***", "yellow", attrs=["bold"])
         self.user_instructions()
         while True:
