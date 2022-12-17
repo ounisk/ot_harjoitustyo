@@ -7,10 +7,10 @@ from repositories.grocerylist_repository import grocerylist_repository
 class TestGrocerylistService(unittest.TestCase): 
     def setUp(self):
         self.grocerylist_service = GrocerylistService()
-        #self.grocerylist = Grocerylist()
         self.grocerylist_service.empty_whole_list()
 
-        self.grocery_item = Grocerylist("milk", 1, "K-market")
+        self.grocery_item1 = Grocerylist("milk", 1, "K-market")
+        self.grocery_item2 = Grocerylist("pineapple", 5, "Lidl")
 
 
     def test_newly_created_list_is_empty(self):
@@ -19,32 +19,37 @@ class TestGrocerylistService(unittest.TestCase):
 
     def test_adding_a_product_and_quantity_is_on_the_list(self):
         self.grocerylist_service.add_product(
-            self.grocery_item.product, self.grocery_item.quantity, self.grocery_item.store)
+            self.grocery_item1.product, self.grocery_item1.quantity, self.grocery_item1.store)
         products = self.grocerylist_service.get_products()
         self.assertEqual((products[0][0], products[0][1], products[0]
                          [2]), ("milk", 1, "K-market"))
 
     def test_adding_products_and_quantities_are_on_the_list(self):
-        self.grocerylist_service.add_product("milk", 2, "K-market")
-        self.grocerylist_service.add_product("pineapple", 5, "Lidl")
+        self.grocerylist_service.add_product(
+            self.grocery_item1.product, self.grocery_item1.quantity, self.grocery_item1.store)
+        self.grocerylist_service.add_product(
+            self.grocery_item2.product, self.grocery_item2.quantity, self.grocery_item2.store)
         products = self.grocerylist_service.get_products()
         self.assertEqual(
             (products[0][0], products[1][1], products[1][2]), ("milk", 5, "Lidl"))
 
 
     def test_adding_a_product_already_on_the_list_not_success(self):
-        self.grocerylist_service.add_product("milk", 2, "Lidl")
+        self.grocerylist_service.add_product(
+            self.grocery_item2.product, self.grocery_item2.quantity, self.grocery_item2.store)
         self.assertRaises(ProductAlreadyOnListError,
-                          lambda: self.grocerylist_service.add_product("milk", 2, "Lidl"))
+                          lambda: self.grocerylist_service.add_product("pineapple", 2, "Lidl"))
 
 
     def test_deleting_a_product(self):
-        self.grocerylist_service.add_product("milk", 4, "Lidl")
-        self.grocerylist_service.add_product("pineapple", 6, "K-market")
-        self.grocerylist_service.delete_product("milk", "Lidl")
+        self.grocerylist_service.add_product(
+            self.grocery_item1.product, self.grocery_item1.quantity, self.grocery_item1.store)
+        self.grocerylist_service.add_product(
+            self.grocery_item2.product, self.grocery_item2.quantity, self.grocery_item2.store)
+        self.grocerylist_service.delete_product("milk", "K-market")
         products = self.grocerylist_service.get_products()
         self.assertEqual(
-            (products[0][0], products[0][1], products[0][2]), ("pineapple", 6, "K-market"))
+            (products[0][0], products[0][1], products[0][2]), ("pineapple", 5, "Lidl"))
 
 
     def test_delete_product_not_on_the_list_error(self):
@@ -53,8 +58,10 @@ class TestGrocerylistService(unittest.TestCase):
 
 
     def test_empty_whole_list(self):
-        self.grocerylist_service.add_product("milk", 7, "Lidl")
-        self.grocerylist_service.add_product("pineapple", 6, "K-market")
+        self.grocerylist_service.add_product(
+            self.grocery_item1.product, self.grocery_item1.quantity, self.grocery_item1.store)
+        self.grocerylist_service.add_product(
+            self.grocery_item2.product, self.grocery_item2.quantity, self.grocery_item2.store)
         self.grocerylist_service.empty_whole_list()
         products = self.grocerylist_service.get_products()
         self.assertEqual(len(products), 0)
