@@ -28,4 +28,10 @@
 |  10.12.2022   |    3.5        | Koodin refaktorointia, myös pylintin ehdotusten pohjalta (0.5h). Käyttöohjeen teko (1.5h), arkkitehtuuri-dokumentin täydennys (1.5h)|
 |  11.12.2022   |    3        | Koodin refaktorointia grocerylist_services_test-tiedostossa (1.5h). Docstringin lisäämistä koodiin (1.5h) |
 |   viikko yht.  |    **16**     | 
-| **Kaikki yht.**      |   **46.5**   |
+|  12.12.2022   |    1.5        | Doctsringin lisäämistä käyttöliittymään (ui.py)|
+|  13.12.2022   |    1.5        |Arkkitehtuurikuvauksen kirjoittamista, sekvenssikaavioita lisää (poisto ja muokkaus).|
+|  15.12.2022   |    2        | Arkkitehtuurikuvauksen kirjoittaminen, viimeiset sekvenssikaaviot (listaa tuotteet ja top3). Docstringin viimeistely|
+|  17.12.2022   |    2        |Testausdokumentin kirjoittamista, lisäksi grocerylist_services_test.py tiedoston refaktorointia.|
+|  18.12.2022   |    2        |Testausdokumentin viimeistely, koodinrefaktorointi/pylint grocerylist_repository.py tiedostossa)|
+|   viikko yht.  |    **9**     | 
+| **Kaikki yht.**      |   **55.5**   |
