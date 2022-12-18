@@ -53,12 +53,12 @@ class GrocerylistRepository:
             """SELECT product, quantity FROM Groceries WHERE store =(?)""", [in_store])
         rows = cursor.fetchall()
 
-        if rows:
-            products = []
 
-            for row in rows:
-                products.append(row)
-            return products
+        products = []
+
+        for row in rows:
+            products.append(row)
+        return products
 
     def find_product(self, find_product, in_store):
         """Etsii onko tietyn kaupan listalla tietty tuote.
