@@ -22,3 +22,6 @@
 - Lisätty TOP3-toiminnallisuus, joka listaa kolme yleisintä ostoslistan tuotetta
 - Lisätty riippuvuudeksi ulkoinen termcolor-kirjasto, jolla toteutettu värejä tekstikäyttöliittymään
 - Lisätty testejä uusille toiminnallisuuksille (määrän muokkaus, TOP3) ja refaktoroitu vanhaa koodia
+
+## Viikko 7
+- Siistitty ja refaktoroitu koodia: grocerylist_repository.py (pylint-ehdotus), grocerylist_services_test.py
