@@ -32,6 +32,6 @@
 |  13.12.2022   |    1.5        |Arkkitehtuurikuvauksen kirjoittamista, sekvenssikaavioita lisää (poisto ja muokkaus).|
 |  15.12.2022   |    2        | Arkkitehtuurikuvauksen kirjoittaminen, viimeiset sekvenssikaaviot (listaa tuotteet ja top3). Docstringin viimeistely|
 |  17.12.2022   |    2        |Testausdokumentin kirjoittamista, lisäksi grocerylist_services_test.py tiedoston refaktorointia.|
-|  18.12.2022   |    2        |Testausdokumentin viimeistely, koodinrefaktorointi/pylint grocerylist_repository.py tiedostossa)|
-|   viikko yht.  |    **9**     | 
-| **Kaikki yht.**      |   **55.5**   |
+|  18.12.2022   |    3        |Testausdokumentin viimeistely, koodin refaktorointi/pylint (grocerylist_repository.py tiedostossa), testaus eri ympäristöissä|
+|   viikko yht.  |    **10**     | 
+| **Kaikki yht.**      |   **56.5**   |
