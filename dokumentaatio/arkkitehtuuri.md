@@ -116,12 +116,12 @@ sequenceDiagram
   GrocerylistService -->> -UI: products
   UI ->> +GrocerylistService: get_products_store("K-market")
   GrocerylistService ->> +GrocerylistRepository: list_products_store("K-market")
-  GrocerylistRepository -->> -GrocerylistService: products("K-market")
-  GrocerylistService -->> -UI: products("K-market")
+  GrocerylistRepository -->> -GrocerylistService: products
+  GrocerylistService -->> -UI: products
    UI ->> +GrocerylistService: get_products_store("Lidl")
   GrocerylistService ->> +GrocerylistRepository: list_products_store("Lidl")
-  GrocerylistRepository -->> -GrocerylistService: products("Lidl")
-  GrocerylistService -->> -UI: products("Lidl")
+  GrocerylistRepository -->> -GrocerylistService: products
+  GrocerylistService -->> -UI: products
  ``` 
   Käyttäjän valitessa "tulosta lista" käyttöliittymä kutsuu sovelluslogiikan *get_products*-metodia, joka kutsuu edelleen GrocerylistRepository-luokan *list_products*-metodia. Tämä metodi hakee tietokannasta tuotteet, jotka tällä hetkellä ovat kauppojen listoilla ja palauttaa listan. Käyttäjä saa tiedon, mikäli koko lista olisi tyhjä. Mikäli listalla on tavaroita, niin käyttöliittymä kutsuu edelleen sovelluslogiikan metodia *get_products_store*, joka hakee kauppakohtaiset listat kutsumalla GrocerylistRepository-luokan metodia *list_products_store*. Tämä metodi palauttaa kauppakohtaisen listan ja tulostus tapahtuu käyttöliittymässä. Mikäli jollakin tai millään listalla ei ole tavaroita, niin käyttäjälle tulostetaan viesti "Kauppalista on tyhjä".  
   
