@@ -1,24 +1,25 @@
 # Vaatimusmäärittely
 ## Sovelluksen tarkoitus
-**Ostoslista**-sovelluksen tarkoituksena on toimia perheen sisäisenä kauppalistana ruokaostoksia varten. Sovellus on useamman käyttäjän käytettävissä (myös samanaikaisesti), lisäksi se on toiminnoiltaan sujuva ja helppo käyttää. 
+**Ostoslista**-sovelluksen tarkoituksena on toimia perheen sisäisenä kauppalistana ruokaostoksia varten. Sovellus on useamman käyttäjän käytettävissä, lisäksi se on toiminnoiltaan sujuva ja helppo käyttää. 
 
 ## Käyttäjät
 Sovelluksella voi olla useampia käyttäjiä, jotka kaikki ovat *normikäyttäjiä*. Kaikilla käyttäjillä on siten samat oikeudet: listan/tuotteiden lisäys ja poisto kumpaan tahansa tai molempiin kauppoihin sekä määrien muuttaminen.
 ## Perusversion tarjoamat ominaisuudet
-- [x] Sovelluksen avautuessa tarjolla on kaksi kauppaa: *K-market* ja *Lidl*.
+- Sovelluksen avautuessa tarjolla on kaksi kauppaa: *K-market* ja *Lidl*.
 - Käyttäjät voivat lisätä kumman tahansa kaupan listaan
-  - [x] haluamiaan tuotteita ja 
-  - [x] yksilöidä määrän (määrä ei ole pakollinen tieto), sama tuote voi olla molempien kauppojen ostoslistoilla.
+  - haluamiaan tuotteita ja 
+  - yksilöidä määrän (määrä ei ole pakollinen tieto), sama tuote voi olla molempien kauppojen ostoslistoilla.
 - Käyttäjät voivat poistaa tai muuttaa listan sisältöä: 
-   - [x] poistaa yksitellen tuotteita tai
-   - [x] muuttaa määriä. 
-
-- [x] Lisäksi on mahdollisuus tyhjentää kerralla koko lista.
+   - poistaa yksitellen tuotteita tai
+   - muuttaa määriä. 
+- Käyttäjä voi nähdä *top3* -listan, jolla on ostoslistan historian kolme useimmin esiintyvää tuotetta.
+- Lisäksi on mahdollisuus tyhjentää kerralla koko lista.
 - Kaikki käyttäjät näkevät kaikki avoinna olevat kauppalistat.
 
 ## Jatkokehitysideat
-- Uusien kauppojen lisääminen listalle, joka olisi mahdollisesti ylläpitäjän tehtävä. Tällöin edellytetään ylläpitäjän roolia.
-- [x] *Top3* -listan lisääminen  
+- Uusien kauppojen lisääminen listalle, joka olisi joko ylläpitäjän tehtävä (edellytetään käyttäjien eri rooleja) tai mahdollista kaikille käyttäjille.
+- Tuotteiden poimiminen *top3*-listalta
+- Graafisen käyttöliittymän tekeminen
 
 
 ## Käyttöliittymäluonnos
