@@ -5,12 +5,14 @@ Sovelluksen tarkoituksena on toimia perheen sisäisenä kauppalistana ruokaostok
 
 Toimintoja ovat tuotteen ja mahdollisen määrän lisäys valittuun kauppaan, tuotteen poisto, tuotteen määrän muokkaus, TOP3-lista ja kaikkien listojen tyhjennys. Käyttöliittymä on tekstikäyttöliittymä. 
 
+Sovelluksen toiminta on testattu Python 3.8 -versiolla. Käytettäessä muita versioita ongelmia saattaa esiintyä.
+
 Sovellus on tehty Helsingin yliopiston Ohjelmistotekniikka-kurssin harjoitustyönä syksyllä 2022.
 
 This is a course project for a software engineering course at the University of Helsinki. The software is a grocery list application suitable for family use.
 
 
-### Dokumentaatio:
+## Dokumentaatio:
 
 [Käyttöohje](https://github.com/ounisk/ot_harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
@@ -27,16 +29,17 @@ This is a course project for a software engineering course at the University of 
 
 
 
-### Releases:
-#### Viimeisin versio:
+## Releases:
+### Viimeisin versio:
+[loppupalautus](https://github.com/ounisk/ot_harjoitustyo/releases/tag/loppupalautus)
 
-#### Aiemmat versiot:
+### Aiemmat versiot:
 [viikko 6 - release](https://github.com/ounisk/ot_harjoitustyo/releases/tag/viikko6)
 
 [viikko 5 - release](https://github.com/ounisk/ot_harjoitustyo/releases/tag/viikko5)
 
 
-### Asennus:
+## Asennus:
 1. Asenna ensin riippuvuudet komennolla:
 ```
 poetry install
@@ -50,7 +53,7 @@ poetry run invoke build
 poetry run invoke start
 ```
 
-### Komentorivitoiminnot:
+## Komentorivitoiminnot:
 1. Ohjelman suorittaminen tapahtuu komennolla:
 ```
 poetry run invoke start
@@ -67,3 +70,8 @@ poetry run invoke coverage-report
 ```
 poetry run invoke lint
 ```
+5. Koodin automaattinen formatointi autopep8-kirjastolla suoritetaan komennolla:
+```
+poetry run invoke format
+```
+
