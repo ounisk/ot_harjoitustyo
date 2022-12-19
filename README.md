@@ -28,6 +28,9 @@ This is a course project for a software engineering course at the University of 
 
 
 ### Releases:
+#### Viimeisin versio:
+
+#### Aiemmat versiot:
 [viikko 6 - release](https://github.com/ounisk/ot_harjoitustyo/releases/tag/viikko6)
 
 [viikko 5 - release](https://github.com/ounisk/ot_harjoitustyo/releases/tag/viikko5)
@@ -48,19 +51,19 @@ poetry run invoke start
 ```
 
 ### Komentorivitoiminnot:
-Ohjelman suorittaminen tapahtuu komennolla:
+1. Ohjelman suorittaminen tapahtuu komennolla:
 ```
 poetry run invoke start
 ```
-Testit suoritetaan komennolla:
+2. Testit suoritetaan komennolla:
 ```
 poetry run invoke test
 ```
-Testikattavuus raportti luodaan ao. komennolla ja se generoituu *htmlcov*-hakemistoon tiedostoon *index.html*
+3. Testikattavuus raportti luodaan ao. komennolla ja se generoituu *htmlcov*-hakemistoon tiedostoon *index.html*
 ```
 poetry run invoke coverage-report
 ```
-Tiedostossa *.pylintrc* määritellyt tarkistukset suoritetaan komennolla:
+4. Tiedostossa *.pylintrc* määritellyt tarkistukset suoritetaan komennolla:
 ```
 poetry run invoke lint
 ```
