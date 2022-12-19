@@ -43,13 +43,13 @@ Ohjelman rakennetta ja luokkien (GrocerylistService, GrocerylistRepository sekä
 ![image](https://user-images.githubusercontent.com/78747844/206849601-bb0da61a-e4b1-4b31-a00e-e33fc79102e7.png)
 
 ## Tietojen pysyväistallennus:
-Tietojen tallennuksesta, lukemista ja hausta vastaa [GrocerylistRepository-luokka](https://github.com/ounisk/ot_harjoitustyo/blob/master/src/repositories/grocerylist_repository.py) (pakkausrakenteessa *repositories*). Tiedot tallennetaan SQLite-tietokantaan.
+Tietojen tallennuksesta, lukemista ja hausta vastaa [GrocerylistRepository-luokka](https://github.com/ounisk/ot_harjoitustyo/blob/master/src/repositories/grocerylist_repository.py) (pakkausrakenteessa *repositories*). Tiedot tallennetaan SQLite-tietokantaan. Ohjelman suunnittelussa on pyritty noudattamaan *repository*-suunnittelumallia.
 
 ### Tiedostot:
 Tietokantatiedoston nimi on määritelty *.env*-tiedostossa. 
-Grocerylist-oliot tallennetaan tietokantatauluihin *Groceries* ja *History*.
+Grocerylist-oliot tallennetaan tietokantatauluihin *Groceries* ja *History*. Tietokantataulut alustetaan *initialize_database.py*-tiedostossa - alustus voidaan suorittaa myös suorittamalla tehtävä *build* (komento `poetry run invoke build`).
 
-## Sekvenssikaavio
+## Päätoiminnallisuuksia sekvenssikaavioina:
 ### Tuotteen lisääminen:
   
 ```mermaid
